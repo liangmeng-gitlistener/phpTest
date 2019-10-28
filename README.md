@@ -1,7 +1,7 @@
 # frame
 学习搭建A PHP FrameWork
 
-git: git@gitee.com:xxg3053/apfw.git  
+git: https://github.com/liangmeng-gitlistener/phpTest  
 学习：http://www.imooc.com/comment/696
 (此处仅为框架的学习及测试，不涉及具体业务)  
 
