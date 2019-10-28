@@ -3,4 +3,4 @@ vendor
 .idea
 phpTest.iml
 composer.lock
-log/twig/*
+log/*
