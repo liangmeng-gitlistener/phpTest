@@ -21,3 +21,64 @@ function p($var)
                         >".print_r($var,true)."</pre>";
     }
 }
+
+/**
+ * post接收方法
+ * @param $name             对应值
+ * @param bool $default   默认值
+ * @param bool $filter    过滤方法
+ * @return mixed|string
+ */
+function post($name, $default = false, $filter = false) {
+    if (isset($_POST[$name])) {
+        if ($filter) {
+            switch ($filter) {
+                case 'int' :
+                    if (is_numeric($_POST[$name])) {
+                        return $_POST[$name];
+                    } else {
+                        return $default;
+                    }
+                break;
+                default: ;
+            }
+        } else {
+            return $_POST[$name];
+        }
+    } else {
+        return $default;
+    }
+}
+
+/**
+ * get接收方法
+ * @param $name             对应值
+ * @param bool $default   默认值
+ * @param bool $filter    过滤方法
+ * @return mixed|string
+ */
+function get($name, $default = false, $filter = false) {
+    if (isset($_GET[$name])) {
+        if ($filter) {
+            switch ($filter) {
+                case 'int' :
+                    if (is_numeric($_GET[$name])) {
+                        return $_GET[$name];
+                    } else {
+                        return $default;
+                    }
+                    break;
+                default: ;
+            }
+        } else {
+            return $_GET[$name];
+        }
+    } else {
+        return $default;
+    }
+}
+
+function jump($url) {
+    header('Location:'.$url);
+    exit;
+}

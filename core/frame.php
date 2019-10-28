@@ -20,6 +20,7 @@ class frame {
             include $ctrlFileInclude;
             $ctrl = new $ctrlFileNew();
             $ctrl -> $action();
+            //打印日志
             $logNew::log('ctrl: '.$ctrlClass.'    '.'action: '.$ctrlClass);
         } else {
             throw new \ Exception("找不到控制器".$ctrlClass);
@@ -85,7 +86,7 @@ class frame {
             ));
             $template = $twig->load($fileName);
 //            $template = $twig->loadTemplate($fileName);
-            $template->display($this->assign?$this->assign:'');
+            $template->display($this->assign?$this->assign:array());
         }
     }
 }

@@ -2,8 +2,8 @@
 namespace app\model;
 use \core\lib\medooModel;
 
-class testModel extends medooModel {
-    public $table_name = 'test_table';
+class guestbookModel extends medooModel {
+    public $table_name = 'guest_book';
 
     public function lists(){
         return $this->select($this->table_name,"*");

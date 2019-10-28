@@ -1,20 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <h1>
-        <?php
-            echo $title
-        ?>
-    </h1>
-
-    <h3>
-        <?php
-            echo $data
-        ?>
-    </h3>
-</body>
-</html>
+{% extends "layout.html" %}
+{% block content %}
+<div class="am-g content">
+    <ul>
+        {% for val in data %}
+        <li class="am-u-sm-3">
+            <div>
+                <h1>{{ val.title }}</h1>
+                <p>{{ val.content }}</p>
+                <p><span>{{ val.createtime|date('Y-m-d H:m:s') }}</span></p>
+                <a class="" href="/index/del?id={{ val.id }}">删除留言</a>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

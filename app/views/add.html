@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="am-g content">
+    <form action="/index/save" method="POST" class="am-form">
+        <fieldset>
+            <div class="am-form-group">
+                <input type="text" class="form-control" name="title" placeholder="请输入title"/>
+            </div>
+            <div class="am-form-group">
+                <textarea class="form-control" name="content" placeholder="请输入内容"></textarea>
+            </div>
+            <button type="submit" class="am-btn am-btn-default">提交</button>
+        </fieldset>
+    </form>
+</div>
+{% endblock %}

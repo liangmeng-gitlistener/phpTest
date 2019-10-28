@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+            <!DOCTYPE html>
 <html>
 <head lang="cn">
     <meta charset="UTF-8">
-    <title>{{ data_title }}</title>
+    <title>首页</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport"
           content="width=device-width, initial-scale=1">
@@ -11,25 +11,23 @@
     <meta http-equiv="Cache-Control" content="no-siteapp"/>
     <link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.6.2/css/amazeui.min.css"/>
     <link rel="stylesheet" href="http://kphcdr.oss-cn-qingdao.aliyuncs.com/assign/app/css/index.css"/>
+<!--    <link rel="stylesheet" href="/assets/css/amazeui.min.css"/>-->
+<!--    <link rel="stylesheet" href="/assets/css/app.css"/>-->
 
-    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
 </head>
 <body>
-<header class="am-topbar am-topbar-fixed-top">
-    <div class="am-container">
-        <h1 class="am-topbar-brand">
-            <a href="/">{{ title }}</a>
-        </h1>
-        <div class="am-g">
-            <a class="am-btn-default" href="/">所有留言</a>
-            <a class="am-btn-default" href="/index/add">添加留言</a>
-        </div>
+<header class="am-topbar am-text-center">
+    <h1 class="am-sm-12">超简单留言板</h1>
+    <div class="am-g">
+        <a class="am-btn-default" href="/">所有留言</a>
+        <a class="am-btn-default" href="/index/add">添加留言</a>
     </div>
 </header>
-
+<div class="am-g content">
 {% block content %}
 <!-- content here -->
 {% endblock %}
+</div>
 
 <footer class="footer">
     <p>模板来自 AmazeUI</p>
